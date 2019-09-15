@@ -3,6 +3,6 @@ public class FizzBuzz {
     }
 
     public String getString() {
-        return null;
+        return "1";
     }
 }
