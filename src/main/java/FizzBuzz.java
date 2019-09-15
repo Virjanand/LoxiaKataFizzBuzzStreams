@@ -12,12 +12,16 @@ public class FizzBuzz {
         conversionRules.put(5, "Buzz");
     }
 
+    private static String concatinateTexts(String a, String b) {
+        return a + b;
+    }
+
     public String getString() {
         return conversionRules.keySet().stream()
                 .map(this::convertNumberToText)
                 .filter(Optional::isPresent)
                 .map(Optional::get)
-                .reduce((a,b) -> a + b)
+                .reduce(FizzBuzz::concatinateTexts)
                 .orElse(Integer.toString(number));
     }
 
