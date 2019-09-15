@@ -6,6 +6,9 @@ public class FizzBuzz {
     }
 
     public String getString() {
+        if (number == 3) {
+            return "Fizz";
+        }
         return Integer.toString(number);
     }
 }
