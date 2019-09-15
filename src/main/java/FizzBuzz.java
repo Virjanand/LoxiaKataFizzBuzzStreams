@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class FizzBuzz {
     private final int number;
-    private Map<Integer, String> conversionRules = new HashMap<Integer, String>();
+    private Map<Integer, String> conversionRules = new HashMap<>();
 
     public FizzBuzz(int number) {
         this.number = number;

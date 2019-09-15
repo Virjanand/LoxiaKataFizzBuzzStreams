@@ -2,9 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WhenFizzBuzzing {
-
-    private FizzBuzz fizzbuzz;
+class WhenFizzBuzzing {
 
     @Test
     void returnStringForNumber() {
@@ -31,7 +29,7 @@ public class WhenFizzBuzzing {
     }
 
     private void assertFizzbuzzReturnsTextForNumber(String text, int number) {
-        fizzbuzz = new FizzBuzz(number);
+        FizzBuzz fizzbuzz = new FizzBuzz(number);
         assertThat(fizzbuzz.getString()).isEqualTo(text);
     }
 }
