@@ -13,20 +13,12 @@ public class FizzBuzz {
     }
 
     public String getString() {
-        String result = "";
-        conversionRules.keySet().stream()
+        return conversionRules.keySet().stream()
                 .map(this::convertNumberToText)
                 .filter(Optional::isPresent)
                 .map(Optional::get)
                 .reduce((a,b) -> a + b)
                 .orElse(Integer.toString(number));
-        for (int rule : conversionRules.keySet()) {
-            if (convertNumberToText((rule)).isPresent())
-                result += convertNumberToText(rule).get();
-        }
-        if (result.equals(""))
-            return Integer.toString(number);
-        return result;
     }
 
     private Optional<String> convertNumberToText(int number) {
