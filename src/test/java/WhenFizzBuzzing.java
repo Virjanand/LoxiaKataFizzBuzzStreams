@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class WhenFizzBuzzing {
     @Test
     void returnStringForNumber() {
-        FizzBuzz fizzbuzz;
+        FizzBuzz fizzbuzz = new FizzBuzz(1);
         assertThat(fizzbuzz.getString())
     }
 }
