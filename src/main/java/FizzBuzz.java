@@ -6,12 +6,15 @@ public class FizzBuzz {
     }
 
     public String getString() {
+        String result = "";
         if (number == 3) {
-            return "Fizz";
+            result = "Fizz";
         }
         if (number == 5) {
-            return "Buzz";
+            result = "Buzz";
         }
-        return Integer.toString(number);
+        if (result.equals(""))
+            return Integer.toString(number);
+        return result;
     }
 }
