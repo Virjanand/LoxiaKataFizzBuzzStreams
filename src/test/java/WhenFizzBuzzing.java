@@ -19,8 +19,9 @@ public class WhenFizzBuzzing {
     }
 
     @Test
-    void returnBuzzFor5() {
+    void returnBuzzForDivisibleBy5() {
         assertFizzbuzzReturnsTextForNumber("Buzz", 5);
+        assertFizzbuzzReturnsTextForNumber("Buzz", 10);
     }
 
     private void assertFizzbuzzReturnsTextForNumber(String text, int number) {
