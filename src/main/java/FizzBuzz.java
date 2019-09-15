@@ -23,7 +23,7 @@ public class FizzBuzz {
 
     private String convertNumberToText(int number, String text) {
         if (this.number % number == 0) {
-            return text;
+            return conversionRules.get(number);
         }
         return "";
     }
