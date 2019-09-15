@@ -13,8 +13,9 @@ public class FizzBuzz {
 
     public String getString() {
         String result = "";
-        result += convertNumberToText(3, "Fizz");
-        result += convertNumberToText(5, "Buzz");
+        for (int rule : conversionRules.keySet()) {
+            result += convertNumberToText(rule, conversionRules.get(rule));
+        }
         if (result.equals(""))
             return Integer.toString(number);
         return result;
