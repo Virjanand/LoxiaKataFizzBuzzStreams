@@ -15,7 +15,8 @@ public class FizzBuzz {
     public String getString() {
         String result = "";
         for (int rule : conversionRules.keySet()) {
-            result += convertNumberToText(rule);
+            if (convertNumberToText((rule)).isPresent())
+                result += convertNumberToText(rule).get();
         }
         if (result.equals(""))
             return Integer.toString(number);
