@@ -24,6 +24,12 @@ public class WhenFizzBuzzing {
         assertFizzbuzzReturnsTextForNumber("Buzz", 10);
     }
 
+    @Test
+    void returnFizzBuzzForDivisibleBy3And5() {
+        assertFizzbuzzReturnsTextForNumber("FizzBuzz", 15);
+        assertFizzbuzzReturnsTextForNumber("FizzBuzz", 30);
+    }
+
     private void assertFizzbuzzReturnsTextForNumber(String text, int number) {
         fizzbuzz = new FizzBuzz(number);
         assertThat(fizzbuzz.getString()).isEqualTo(text);
