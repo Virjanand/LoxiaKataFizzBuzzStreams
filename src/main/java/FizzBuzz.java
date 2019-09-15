@@ -7,8 +7,8 @@ public class FizzBuzz {
 
     public String getString() {
         String result = "";
-        result = convertNumberToText(result, 3, "Fizz");
-        result = convertNumberToText(result, 5, "Buzz");
+        result += convertNumberToText(result, 3, "Fizz");
+        result += convertNumberToText(result, 5, "Buzz");
         if (result.equals(""))
             return Integer.toString(number);
         return result;
