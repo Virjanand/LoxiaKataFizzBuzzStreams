@@ -13,8 +13,9 @@ public class WhenFizzBuzzing {
     }
 
     @Test
-    void returnFizzFor3() {
+    void returnFizzForDivisibleBy3() {
         assertFizzbuzzReturnsTextForNumber("Fizz", 3);
+        assertFizzbuzzReturnsTextForNumber("Fizz", 6);
     }
 
     @Test
