@@ -8,11 +8,11 @@ public class WhenFizzBuzzing {
 
     @Test
     void returnStringForNumber() {
-        assertFizzbuzzReturnsTextForNumber();
+        assertFizzbuzzReturnsTextForNumber("1", 1);
     }
 
-    private void assertFizzbuzzReturnsTextForNumber() {
-        fizzbuzz = new FizzBuzz(1);
-        assertThat(fizzbuzz.getString()).isEqualTo("1");
+    private void assertFizzbuzzReturnsTextForNumber(String text, int number) {
+        fizzbuzz = new FizzBuzz(number);
+        assertThat(fizzbuzz.getString()).isEqualTo(text);
     }
 }
