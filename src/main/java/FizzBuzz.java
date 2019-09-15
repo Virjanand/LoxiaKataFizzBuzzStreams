@@ -12,10 +12,6 @@ public class FizzBuzz {
         conversionRules.put(5, "Buzz");
     }
 
-    private static String concatinateTexts(String a, String b) {
-        return a + b;
-    }
-
     public String getString() {
         return conversionRules.keySet().stream()
                 .map(this::convertNumberToText)
@@ -30,5 +26,9 @@ public class FizzBuzz {
             return Optional.of(conversionRules.get(number));
         }
         return Optional.empty();
+    }
+
+    private static String concatinateTexts(String a, String b) {
+        return a + b;
     }
 }
