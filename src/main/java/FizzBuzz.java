@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class FizzBuzz {
     private final int number;
@@ -21,10 +22,10 @@ public class FizzBuzz {
         return result;
     }
 
-    private String convertNumberToText(int number) {
+    private Optional<String> convertNumberToText(int number) {
         if (this.number % number == 0) {
-            return conversionRules.get(number);
+            return Optional.of(conversionRules.get(number));
         }
-        return "";
+        return Optional.empty();
     }
 }
