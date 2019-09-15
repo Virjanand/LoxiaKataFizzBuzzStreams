@@ -6,6 +6,6 @@ public class FizzBuzz {
     }
 
     public String getString() {
-        return "1";
+        return Integer.toString(number);
     }
 }
