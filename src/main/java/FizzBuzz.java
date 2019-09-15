@@ -14,14 +14,14 @@ public class FizzBuzz {
     public String getString() {
         String result = "";
         for (int rule : conversionRules.keySet()) {
-            result += convertNumberToText(rule, conversionRules.get(rule));
+            result += convertNumberToText(rule);
         }
         if (result.equals(""))
             return Integer.toString(number);
         return result;
     }
 
-    private String convertNumberToText(int number, String text) {
+    private String convertNumberToText(int number) {
         if (this.number % number == 0) {
             return conversionRules.get(number);
         }
