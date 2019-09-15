@@ -15,10 +15,9 @@ public class FizzBuzz {
     }
 
     private String convertNumberToText(int number, String text) {
-        String result = "";
         if (this.number % number == 0) {
-            result = text;
+            return text;
         }
-        return result;
+        return "";
     }
 }
