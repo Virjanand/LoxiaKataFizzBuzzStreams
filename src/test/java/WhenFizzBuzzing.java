@@ -9,6 +9,7 @@ public class WhenFizzBuzzing {
     @Test
     void returnStringForNumber() {
         assertFizzbuzzReturnsTextForNumber("1", 1);
+        assertFizzbuzzReturnsTextForNumber("2", 2);
     }
 
     private void assertFizzbuzzReturnsTextForNumber(String text, int number) {
