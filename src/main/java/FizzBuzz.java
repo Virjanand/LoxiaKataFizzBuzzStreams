@@ -7,14 +7,14 @@ public class FizzBuzz {
 
     public String getString() {
         String result = "";
-        result += convertNumberToText(result, 3, "Fizz");
-        result += convertNumberToText(result, 5, "Buzz");
+        result += convertNumberToText(3, "Fizz");
+        result += convertNumberToText(5, "Buzz");
         if (result.equals(""))
             return Integer.toString(number);
         return result;
     }
 
-    private String convertNumberToText(String result, int number, String text) {
+    private String convertNumberToText(int number, String text) {
         String result = "";
         if (this.number % number == 0) {
             result = text;
