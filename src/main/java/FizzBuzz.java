@@ -7,14 +7,17 @@ public class FizzBuzz {
 
     public String getString() {
         String result = "";
-        if (number == 3) {
-            result = "Fizz";
-        }
-        if (number == 5) {
-            result = "Buzz";
-        }
+        result = convertNumberToText(result, 3, "Fizz");
+        result = convertNumberToText(result, 5, "Buzz");
         if (result.equals(""))
             return Integer.toString(number);
+        return result;
+    }
+
+    private String convertNumberToText(String result, int i, String buzz) {
+        if (number == i) {
+            result = buzz;
+        }
         return result;
     }
 }
