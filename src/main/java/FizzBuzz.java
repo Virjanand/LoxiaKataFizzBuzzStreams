@@ -14,9 +14,9 @@ public class FizzBuzz {
         return result;
     }
 
-    private String convertNumberToText(String result, int i, String buzz) {
-        if (number == i) {
-            result = buzz;
+    private String convertNumberToText(String result, int number, String text) {
+        if (this.number == number) {
+            result = text;
         }
         return result;
     }
